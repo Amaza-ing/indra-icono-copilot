@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f7f4">
+  <meta name="description" content="Estudio Norte: diseño, estrategia y experiencias digitales para marcas con algo que decir.">
+  <title>Estudio Norte — Ideas que encuentran su norte</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Estudio Norte, ir al inicio">
+      <span class="brand-mark" aria-hidden="true">N</span>
+      <span>estudio<span class="brand-light">norte</span></span>
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+      <a href="#servicios">Qué hacemos</a>
+      <a href="#estudio">El estudio</a>
+      <a class="nav-contact" href="mailto:hola@estudionorte.com">Hablemos <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Estudio creativo independiente</p>
+        <h1>Ideas que<br>encuentran su <span>norte.</span></h1>
+        <p class="hero-intro">Acompañamos a marcas con propósito a encontrar su lugar y dejar huella en el mundo digital.</p>
+        <a class="button button-dark" href="#servicios">Descubre lo que hacemos <span aria-hidden="true">↘</span></a>
+      </div>
+
+      <div class="hero-art" aria-label="Composición gráfica abstracta en tonos cálidos" role="img">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div>
+        <div class="art-horizon"></div>
+        <span class="art-label">CREATIVIDAD<br>CON DIRECCIÓN</span>
+        <span class="art-coordinate">41°23' N<br>02°10' E</span>
+      </div>
+      <a class="scroll-cue" href="#servicios"><span aria-hidden="true">↓</span> Desliza para explorar</a>
+    </section>
+
+    <section class="services section-wrap" id="servicios">
+      <div class="section-heading">
+        <p class="eyebrow">01 — Nuestro enfoque</p>
+        <h2>Lo importante no es<br>hacer más. Es <span>hacerlo bien.</span></h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <span class="service-number">01</span>
+          <div class="service-icon" aria-hidden="true">✳</div>
+          <h3>Estrategia</h3>
+          <p>Encontramos la esencia de tu marca y trazamos el camino para hacerla crecer.</p>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="service-card">
+          <span class="service-number">02</span>
+          <div class="service-icon icon-spark" aria-hidden="true">✳</div>
+          <h3>Identidad</h3>
+          <p>Construimos sistemas visuales auténticos que se sienten y se recuerdan.</p>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="service-card">
+          <span class="service-number">03</span>
+          <div class="service-icon icon-circle" aria-hidden="true">↗</div>
+          <h3>Digital</h3>
+          <p>Diseñamos experiencias útiles, bonitas y pensadas para personas reales.</p>
+          <span class="service-arrow" aria-hidden="true">↗</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="estudio">
+      <div class="about-inner">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> 02 — Quiénes somos</p>
+        <p class="about-statement">Somos un estudio pequeño con <span>ideas grandes.</span> Creemos en el trabajo cercano, las preguntas honestas y las marcas que hacen las cosas con intención.</p>
+        <a class="text-link" href="mailto:hola@estudionorte.com">Cuéntanos tu idea <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="about-decoration" aria-hidden="true">N.</div>
+    </section>
+
+    <section class="contact section-wrap" id="contacto">
+      <p class="eyebrow">¿Tienes algo en mente?</p>
+      <div class="contact-row">
+        <h2>Empecemos<br>por <span>una charla.</span></h2>
+        <a class="contact-link" href="mailto:hola@estudionorte.com">hola@estudionorte.com <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#inicio">
+      <span class="brand-mark" aria-hidden="true">N</span>
+      <span>estudio<span class="brand-light">norte</span></span>
+    </a>
+    <p>Diseñado con intención. <span>© <span id="year"></span> Estudio Norte</span></p>
+    <a class="back-top" href="#inicio">Volver arriba ↑</a>
+  </footer>
+
+  <div class="clock" role="img" aria-label="Reloj analógico con hora local">
+    <span class="clock-hand clock-hour" aria-hidden="true"></span>
+    <span class="clock-hand clock-minute" aria-hidden="true"></span>
+    <span class="clock-center" aria-hidden="true"></span>
+  </div>
+</body>
+</html>
