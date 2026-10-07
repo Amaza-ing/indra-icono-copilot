@@ -13,7 +13,7 @@ Mantener esta web como una landing page limpia, moderna y profesional, con un to
 - Usa nombres descriptivos y profesionales para clases, IDs y funciones.
 - No agregues texto de prueba, placeholders o contenido ficticio sin necesidad.
 
-## Reglas de implementación     
+## Reglas de implementación
 
 - Haz cambios pequeños, precisos y enfocados en la tarea solicitada.
 - No crees archivos nuevos si no son estrictamente necesarios.
