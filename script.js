@@ -3,8 +3,55 @@ const siteNav = document.querySelector(".site-nav");
 const year = document.querySelector("#year");
 const hourHand = document.querySelector(".clock-hour");
 const minuteHand = document.querySelector(".clock-minute");
+const themeToggle = document.querySelector("#theme-toggle");
+const availableThemes = ["terracota", "bosque", "noche", "lavanda", "oceano"];
+const themeNames = {
+  terracota: "Terracota",
+  bosque: "Bosque",
+  noche: "Noche",
+  lavanda: "Lavanda",
+  oceano: "Océano",
+};
 
 year.textContent = new Date().getFullYear();
+
+function setTheme(theme) {
+  if (!availableThemes.includes(theme)) return;
+
+  document.documentElement.dataset.theme = theme;
+  const themeIndex = availableThemes.indexOf(theme);
+  const nextTheme = availableThemes[(themeIndex + 1) % availableThemes.length];
+  themeToggle.textContent = themeNames[theme];
+  themeToggle.setAttribute(
+    "aria-label",
+    `Tema actual: ${themeNames[theme]}. Siguiente tema: ${themeNames[nextTheme]}.`,
+  );
+
+  const themeColor = getComputedStyle(document.documentElement)
+    .getPropertyValue("--paper")
+    .trim();
+  document.querySelector('meta[name="theme-color"]').content = themeColor;
+}
+
+try {
+  const savedTheme = localStorage.getItem("estudio-norte-theme");
+  setTheme(availableThemes.includes(savedTheme) ? savedTheme : "terracota");
+} catch {
+  setTheme("terracota");
+}
+
+themeToggle.addEventListener("click", () => {
+  const currentTheme = document.documentElement.dataset.theme;
+  const currentIndex = availableThemes.indexOf(currentTheme);
+  const theme = availableThemes[(currentIndex + 1) % availableThemes.length];
+  setTheme(theme);
+
+  try {
+    localStorage.setItem("estudio-norte-theme", theme);
+  } catch {
+    // El cambio de tema sigue funcionando aunque el almacenamiento esté bloqueado.
+  }
+});
 
 /**
  * Actualiza las agujas del reloj analógico con la hora local actual.
