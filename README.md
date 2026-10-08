@@ -1,4 +1,4 @@
-# Estudio Norte!!!!!!
+# Estudio Norte
 
 Landing page sencilla para una agencia creativa llamada Estudio Norte.
 
